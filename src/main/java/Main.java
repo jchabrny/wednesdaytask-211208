@@ -4,25 +4,19 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
-        HashMap<String, String> fun = new HashMap<String, String>();
-        fun.put("bobby", "FluffyPonies!");
-        fun.put("helloKitty", "AloeVery_");
-        fun.put("coolGuy", "password123");
-        System.out.println(fun.containsValue("AloeVery_"));
-        System.out.println(fun.containsKey("coolGuy"));
-        System.out.println(fun.replace("bobby", "FluffyParrot!"));
-        System.out.println(fun.keySet());
-        System.out.println(fun.values());
-        System.out.println(fun); // HashMaps don't have a specific order
+
+        Student student1 = new Student("Annika", 2.1, false, "history");
+        Student student2 = new Student("Paul", 2.8, false, "history");
+        Student student3 = new Student("John", 2.8, true, "business");
+
+        University university = new University("Coding Institute");
 
         HashMap<String, Student> studentGroup = new HashMap<String, Student>();
-        studentGroup.put("student1", new Student()); //key on the left, value on the right
-        studentGroup.put("student2", new Student());
-        studentGroup.put("student3", new Student());
-        studentGroup.put("student4", new Student());
+        studentGroup.put("student1", student1); //key on the left, value on the right
+        studentGroup.put("student2", student2);
+        studentGroup.put("student3", student3);
 
-        System.out.println(studentGroup.get("student3"));
-
+        System.out.println(studentGroup.values());
 
         String[] universityStudents = new String[3]; // with an array you have to know the exact size
         universityStudents[0] = "Maths student";
